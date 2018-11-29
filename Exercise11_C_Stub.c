@@ -358,8 +358,21 @@ int main (void) {
     
   for (;;) { /* do forever */
 		PutStringSB("Welcome to the game player!!", MAX_STRING);
-		
-		
+		NewLine;
+		PutStringSB("There are 10 rounds to this game.",MAX_STRING);
+	    NewLine;
+	  	PutStringSB("Your objective is to enter the letter of the LED you see before time runs out.", MAX_STRING);
+	    NewLine;
+   	  	PutStringSB("R = red, G = green, B = booth.",MAX_STRING);
+	    NewLine;
+	  	PutStringSB("The game will progressively get harder as the game continues.",MAX_STRING);
+	    NewLine;
+	  	PutStringSB("Good luck and have fun! Remember it is only a game for a lab.",MAX_STRING);
+	    NewLine;
+
+
+
+
 		}
   } /* do forever */
 
