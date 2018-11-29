@@ -1,11 +1,11 @@
-            TTL Program Title for Listing Header Goes Here
+            TTL All the assembly needed for the program
 ;****************************************************************
 ;Descriptive comment header goes here.
 ;(What does the program do?)
-;Name:  <Your name here>
-;Date:  <Date completed here>
+;Name:  Andy Keats, Seth Gower
+;Date:  11/29/2018
 ;Class:  CMPE-250
-;Section:  <Your lab section, day, and time here>
+;Section:  Section 4, Thursday at 2:00pm
 ;---------------------------------------------------------------
 ;Keil Template for KL46 Assembly with Keil C startup
 ;R. W. Melton

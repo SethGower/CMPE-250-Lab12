@@ -1,8 +1,8 @@
 /*********************************************************************/
-/* Using the onboard ADC and DAC move a servo using both C and       */
+/* Make a game using a series of information form other labs         */
 /* assembly code.                                                    */
-/* Name:  Andrew Keats		                                         */
-/* Date:  11/15/2018                                                 */
+/* Name:  Andrew Keats, Seth Gower                                   */
+/* Date:  11/29/2018                                                 */
 /* Class:  CMPE 250                                                  */
 /* Section:  Thursday 2:00pm                                         */
 /*-------------------------------------------------------------------*/
