@@ -299,8 +299,24 @@ PIT_TCTRL_CH_IE  EQU  (PIT_TCTRL_TEN_MASK :OR: PIT_TCTRL_TIE_MASK)
 			EXPORT  PWM_duty_table_0
 			EXPORT  DAC0_table_0  ;make available to C program 
 			EXPORT 	UART0_IRQHandler 
+			EXPORT	NewLine
 				
 ;>>>>> begin subroutine code <<<<<
+NewLine				PROC	{}
+;***************************************************************
+;Creates a new line and returns the character  
+;	Input:
+; 	  None
+;	Output:
+;	  None
+;***************************************************************
+			PUSH	{R0-R2, LR}
+			MOVS 	R0,#LF
+			BL		PutChar
+			MOVS	R0,#CR
+			BL		PutChar
+			POP		{PC, R0-R2}
+			ENDP
 
 PutStringSB		PROC	{}
 ;***************************************************************

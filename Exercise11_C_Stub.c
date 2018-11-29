@@ -357,43 +357,10 @@ int main (void) {
   UInt16 *PWM_Table = &PWM_duty_table_0;
     
   for (;;) { /* do forever */
-		PutStringSB("Type a number from 1 to 5:  ", MAX_STRING);
-		int response;
-		response = (int)GetChar();
-        PutChar(response);      //Echos to the terminal
-		if (response > 0x30 && response < 0x36){ //check if valid input
-            PutChar(0xD);   //new line
-            PutChar(0xA);   //new line
-            PutStringSB("   Original digital value:  0x", MAX_STRING);
-            UInt16 OG_Value = DAC0_Table[(getIndex(response)-1)]; //converts
-            PutNumHex(OG_Value); //prints the value
-            PutChar(0xD);   //new line
-            PutChar(0xA);   //new line
-            PutStringSB("        New digital value:  0x", MAX_STRING);
-            /* Set DAC0 output voltage to midpoint of segment two of voltage range */ 
-            DAC0->DAT[0].DATL = (UInt8) (DAC0_table [(getIndex(response)-1)] & 0xFF); 
-            DAC0->DAT[0].DATH = (UInt8) (DAC0_table [(getIndex(response)-1)] >> 8); 
-            
-            //Start conversion
-            ADC0->SC1[0] = ADC0_SC1_SGL_DAC0; 
-            //Wait for conversion to complete
-            while (!(ADC0->SC1[0] & ADC_SC1_COCO_MASK)); 
-            //Read digital value
-            UInt16 ADC_VAL = (ADC0->R[0]-1); 
-            
-            PutNumHex(ADC_VAL);
-            PutChar(0xD);   //new line
-            PutChar(0xA);   //new line
-            PutStringSB("           Servo position:  ", MAX_STRING);
-              
-            TPM0->CONTROLS[4].CnV = PWM_duty_table [(getIndex(response)-1)]; //Sets position
-            
-            PutChar(response); // prints position
-            PutChar(0xD);   //new line
-            PutChar(0xA);   //new line
+		PutStringSB("Welcome to the game player!!", MAX_STRING);
+		
+		
 		}
-        PutChar(0xD);   //new line
-        PutChar(0xA);   //new line
   } /* do forever */
 
   return (0);
