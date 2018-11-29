@@ -370,14 +370,23 @@ int main (void) {
 	  	PutStringSB("Good luck and have fun! Remember it is only a game for a lab.",MAX_STRING);
 	    NewLine;
 
-
-
+		int rounds = 0;		/* tracks the rounds the player has done */
+		int score = 0; 		/* tracks the score of the user */
+		
+		/* Keeps track of haw many rounds the user has played */
+		for (rounds; rounds < 10; rounds + 1){ 
+		
+		}
 
 		}
   } /* do forever */
 
   return (0);
 } /* main */
+
+int Score(int currScore, int Round){
+	return currScore + Round;
+}
 
 int getIndex(int index){
     if (index == 0x31){
